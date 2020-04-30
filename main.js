@@ -41,7 +41,7 @@ console.log('pass 8');
 app.post ('/students/submit', homeController.addStudents);
 app.post('/newstudent', homeController.addStudents, homeController.showStudents);
 console.log('pass 9');
-app.get('/newstudent', homeController.getNewStudents);
+app.get('/newstudent', homeController.getNewStudent);
 //app.createServer( router.handle )
 
 app.listen( app.get("port"),  () => {
