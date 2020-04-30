@@ -2,11 +2,11 @@
 
   <div>
       <h1>Qualified Students</h1>
-      <h2>The following students have a partial GPA higher than a 3.0 and are eligible for internship credit.</h2>
+      <h2>The following students have a partial GPA higher than a 2.5 and are eligible for internship credit.</h2>
   </div>
   <div>
     <span>
-      <% allCourses.forEach(course => {%>
+      <% allStudents.forEach(course => {%>
       <h5> <%= course.name %> </h5>
       <span><%= course.avgGrade %> </span>
       <% }) %>

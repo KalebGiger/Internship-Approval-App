@@ -38,7 +38,7 @@ app.get( '/', (req,res) => {
 console.log('pass 7');
 app.get('/courses', homeController.showStudents);
 console.log('pass 8');
-app.post ('/students/submit', homeController.addStudents);
+app.post ('/courses/submit', homeController.addStudents);
 app.post('/newstudent', homeController.addStudents, homeController.showStudents);
 console.log('pass 9');
 app.get('/newstudent', homeController.getNewStudent);
