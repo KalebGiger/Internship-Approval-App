@@ -3,41 +3,41 @@ const express = require('express');
 const router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: "Courses"})
+    res.render('index', { title: "Students"})
 });
-var courses = [
-    {
-        name: "Node.js Programming",
-        price: "300"
-    },
-    {
-        name: "Big Data",
-        price: "100"
-    }
+var students = [
+    // {
+    //     name: "Node.js Programming",
+    //     price: "300"
+    // },
+    // {
+    //     name: "Big Data",
+    //     price: "100"
+    // }
 ];
 console.log('in homeController pass 1');
-router.showCourses = (req, res) => {
-    res.render("courses", {
-        allCourses: courses, title: "Course List"
+router.showStudents = (req, res) => {
+    res.render("students", {
+        allStudents: students, title: "Student List"
     });
 };
 console.log('in homeController pass 2');
-router.addCourses = (req, res) => {
-    console.log("in homeController addCourses");
-    var newcourseName = req.body.name;
-    console.log("name " + newcourseName);
-    var newCoursePrice = req.body.price;
-    let allCourses = courses;
-    allCourses.push({name: newcourseName, price: newCoursePrice});
-    res.render("courses", {
-        allCourses: courses
+router.addStudents = (req, res) => {
+    console.log("in homeController addStudent");
+    var newstudentName = req.body.name;
+    console.log("name " + newstudentName);
+    var newAvgGrade = req.body.avgGrade;
+    let allStudents = students;
+    allStudents.push({name: newstudentName, avgGrade: newAvgGrade});
+    res.render("students", {
+        allStudents: students
     });
 };
 
 console.log('in homeController pass 3');
-router.getNewCourse = (req, res) => {
-    console.log("in homeController getNewCourse");
-    res.render("newcourse", {title: "New Course"});
+router.getNewStudent = (req, res) => {
+    console.log("in homeController getNewStudent");
+    res.render("newstudent", {title: "New Student"});
 };
 module.exports = router;
 

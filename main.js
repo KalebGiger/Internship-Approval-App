@@ -36,12 +36,12 @@ app.get( '/', (req,res) => {
 
 
 console.log('pass 7');
-app.get('/courses', homeController.showCourses);
+app.get('/courses', homeController.showStudents);
 console.log('pass 8');
-app.post ('/courses/submit', homeController.addCourses);
-app.post('/newcourse', homeController.addCourses, homeController.showCourses);
+app.post ('/students/submit', homeController.addStudents);
+app.post('/newstudent', homeController.addStudents, homeController.showStudents);
 console.log('pass 9');
-app.get('/newcourse', homeController.getNewCourse);
+app.get('/newstudent', homeController.getNewStudents);
 //app.createServer( router.handle )
 
 app.listen( app.get("port"),  () => {

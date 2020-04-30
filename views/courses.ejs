@@ -1,23 +1,16 @@
-
-
-
- 
 <div class="container">
-  
+
   <div>
-  <span>
-    <h1>Our Courses</h1>
-    <span class="col-6 center">
-     <img src="images/fruit.jpg" alt=""  >
-   </span>
+      <h1>Qualified Students</h1>
+      <h2>The following students have a partial GPA higher than a 3.0 and are eligible for internship credit.</h2>
   </div>
-  <div class="col-6 center">
+  <div>
     <span>
-  <% allCourses.forEach(course => {%> 
-    <h5> <%= course.name %> </h5>
-    <span>$ <%= course.price %> </span>
-  <% }) %>
-  </span>
+      <% allCourses.forEach(course => {%>
+      <h5> <%= course.name %> </h5>
+      <span><%= course.avgGrade %> </span>
+      <% }) %>
+    </span>
   </div>
-  
+
 </div>
