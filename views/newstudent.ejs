@@ -2,28 +2,31 @@
 
   <div>
     <span>
+      <% if(typeof invalid !== 'undefined') {%>
+        <h2 style="color:red"> Invalid grade entered!</h2>
+      <% } %>
       <h2>Enter the student's name and their letter grades for the following courses.</h2>
-      <form style="margin: 20px" action="/newstudent" method="post">
+      <form style="margin: 20px" action="/students/submit" method="post">
         <label for="name">Name</label>
-        <input type="text" name="name" value="">
+        <input type="text" name="name" > 
         <div>
           <label>Grades:</label>
         </div>
         <div>
           <label for="csc141">CSC141:</label>
-          <input class="letterInput" type="text" name="csc141" value="">
+          <input class="letterInput" type="text" name="csc141" >
         </div>
         <div>
           <label for="csc142">CSC142:</label>
-          <input class="letterInput" type="text" name="csc142" value="">
+          <input class="letterInput" type="text" name="csc142" >
         </div>
         <div>
           <label for="csc240">CSC240:</label>
-          <input class="letterInput" type="text" name="csc240" value="">
+          <input class="letterInput" type="text" name="csc240" >
         </div>
         <div>
           <label for="csc241">CSC241:</label>
-          <input class="letterInput" type="text" name="csc241" value="">
+          <input class="letterInput" type="text" name="csc241" >
         </div>
 
         <input type="submit" value="Submit">

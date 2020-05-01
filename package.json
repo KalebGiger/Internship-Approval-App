@@ -1,0 +1,30 @@
+{
+  "name": "Internship-Approval-App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "http": "^0.0.0",
+    "http-status-codes": "^1.4.0",
+    "mongodb": "^3.5.7",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KalebGiger/Internship-Approval-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KalebGiger/Internship-Approval-App/issues"
+  },
+  "homepage": "https://github.com/KalebGiger/Internship-Approval-App#readme"
+}

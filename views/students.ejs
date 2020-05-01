@@ -6,9 +6,10 @@
   </div>
   <div>
     <span>
-      <% allStudents.forEach(course => {%>
-      <h5> <%= course.name %> </h5>
-      <span><%= course.avgGrade %> </span>
+      <% allStudents.forEach(student => {%>
+        <% if(student.PartialGPA > 2.5) {%>
+          <h5> <%= student.name + ": " + student.PartialGPA %> </h5>
+        <% } %>
       <% }) %>
     </span>
   </div>

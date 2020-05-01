@@ -1,8 +1,10 @@
+'use strict';
+
 const port = 3000;
 //var  http = require("http");
 //var  httpStatus = require("http-status-codes");
 var express = require('express');
-var app = express();
+const app = express();
 console.log('pass 1');
 //var  router = require("./router");
 console.log('pass 2');
@@ -11,7 +13,9 @@ console.log('pass 3');
 //var  utils = require("./utils");
 console.log('pass 4');
 const layouts = require("express-ejs-layouts");
-var homeController = require("./controllers/homeController");
+const homeController = require("./controllers/homeController");
+const errorController = require('./controllers/errorcontroller');
+
 app.use (
   express.urlencoded({
     extended: false
@@ -34,15 +38,25 @@ app.get( '/', (req,res) => {
   res.render('index', {title: "CSC Courses"});
 });
 
+console.log("+get homeController");
+app.get( '/', homeController);
+
 
 console.log('pass 7');
-app.get('/courses', homeController.showStudents);
+app.get('/students', homeController.showStudents);
 console.log('pass 8');
-app.post ('/courses/submit', homeController.addStudents);
-app.post('/newstudent', homeController.addStudents, homeController.showStudents);
-console.log('pass 9');
+
 app.get('/newstudent', homeController.getNewStudent);
+app.post ('/students/submit', homeController.addStudents);
+
+//app.post('/newstudent', homeController.addStudents);  //, homeController.showStudents
+console.log('pass 9');
+
+
 //app.createServer( router.handle )
+
+app.use(errorController.respondNoResourceFound);
+app.use(errorController.respondInternalError);
 
 app.listen( app.get("port"),  () => {
   console.log(`Server running on port ${port}`);
