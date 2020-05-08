@@ -7,7 +7,7 @@
   <div>
     <span>
       <% allStudents.forEach(student => {%>
-        <% if(student.PartialGPA > 2.5) {%>
+        <% if(student.PartialGPA >= 2.5) {%>
           <h5> <%= student.name + ": " + student.PartialGPA %> </h5>
         <% } %>
       <% }) %>
